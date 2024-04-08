@@ -1,1 +1,54 @@
-
+body {
+  background: rgb(236, 186, 236);
+  display: block;
+  margin: 8px;
+  width: 258;
+  height: 579;
+}
+a {
+  color: rgba(160, 4, 126, 0.952);
+}
+h1 {
+  color: purple;
+  text-align: center;
+}
+.inputSearchButton {
+  font-size: 10px;
+  border-radius: 10px;
+  background-color: blanchedalmond;
+  padding: 10px;
+  line-height: 1px;
+}
+.submitButton {
+  font-size: 10px;
+  border-radius: 20px;
+  background-color: blanchedalmond;
+  color: purple;
+  padding: 15px;
+  line-height: 1px;
+}
+.cityTemp {
+  font-size: 50px;
+  font-style: italic;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: -10;
+}
+.sideTemp {
+  display: flex;
+  justify-content: space-around;
+}
+.cityName {
+  color: purple;
+  text-align: center;
+}
+.cityIcon {
+  position: relative;
+  top: -5px;
+  font-size: 60px;
+  margin-right: 10px;
+}
+.ditails {
+  text-align: center;
+}
