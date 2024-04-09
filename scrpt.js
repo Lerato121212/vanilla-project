@@ -35,11 +35,24 @@ function formatDate(date) {
   }
   return `${day} ${hours} ${minutes}`;
 }
+function weatherNew(response) {
+  let temperatureElement = document.querySelector("#temp");
+  temperatureElement.innerHTML = response.data.temperature.current;
+temperatureElement.innerHTML = Math.round(temperature);
+}
+function searchCity(city) {
+  let apiKey = `teba6f0d67dd94612o497355b3df082a`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${nameOfCity}&key=teba6f0d67dd94612o497355b3df082a&units=metric`;
+
+  return apiUrl;
+}
+
 function submitSearchForm(event) {
   event.preventDefault();
   let inputSearch = document.querySelector("#inputSearchButton");
-  let hCity = document.querySelector("#nameOfCity");
-  hCity.innerHTML = inputSearch.value;
+  let city = document.querySelector("#nameOfCity");
+  city.innerHTML = inputSearch.value;
+  searchCity(inputSearch.value);
 }
 
 let formElement = document.querySelector("#formSearch");
