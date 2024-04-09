@@ -17,3 +17,20 @@ windspeedElement.innerHTML = `${response.data.wind.speed}km/h`;
 temperatureElement.innerHTML = Math.round(temperature);
 iconElement.innerhtml = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`
 
+function formatDate(date) {
+  let minutes = date.getMinutes();
+  let hours = date.getHours();
+  let days = ["Sunday",
+"Monday",
+"Tuesday",
+"Wednesday",
+"Thursday",
+"Friday",
+"Saturday",];
+let day = days[date.getDay()];
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+
+}
+
+}
