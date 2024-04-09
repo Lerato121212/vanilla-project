@@ -37,11 +37,10 @@ function formatDate(date) {
 }
 function submitSearchForm(event) {
   event.preventDefault();
-  let inputSearchButton = document.querySelector("#inputSearchButton");
-
-  searchFormCity(inputSearchButton.value);
+  let inputSearch = document.querySelector("#inputSearchButton");
+  let hCity = document.querySelector("#nameOfCity");
+  hCity.innerHTML = inputSearch.value;
 }
 
-let formElement = document.querySelector("#form");
+let formElement = document.querySelector("#formSearch");
 formElement.addEventListener("submit", submitSearchForm);
-searchFormCity("Paris");
