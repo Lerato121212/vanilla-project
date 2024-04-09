@@ -1,31 +1,23 @@
-function dateFormat(date) {
-  let minutes = date.getMinutes();
-  let hours = date.getHours();
-  let day = date.getDay();
+function weatherResponse(response) {
+let temperatureElement =document.querySelector("#temperature")
+let temperature = reponse.data.temperature.current;
+let cityElement=document.querySelector("#city");
+let descriptionElement =document.querySelector("#description");
+let humidityElement = document.querySelector("#humidity");
+let windspeedElement = document.querySelector("#wind-speed");
+let timeElement = document.querySelector("#time");
+let date = new date("response.data.time*1000");
+let iconElement = document.querySelector("#icon");
 
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-
-  let dayAfterFormat = days[day];
-  return `${dayAfterFormat} ${hours}:${minutes}`;
+cityElement.innerHTML=response.data.city;
+timeElement.innerHTML=formatDate(date);
+descriptionElement.innerHTML=response.data.condition.description;
+humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+windspeedElement.innerHTML = `${response.data.wind.speed}km/h`;
+temperatureElement.innerHTML = Math.round(temperature);
+iconElement.innerhtml = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;`;
 }
-let formSearch = document.querySelector("#formSearch");
-formSearch.addEventListener("submit", search);
 
-let latestCityDAte = document.querySelector("#cityDate");
-let latestDate = new Date();
-
-latestCityDAte.innerHTML = dateFormat(latestCityDAte);
+function formatDate(date){
+  
+}
