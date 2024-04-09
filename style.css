@@ -1,8 +1,10 @@
-body {
+.thePurpleApp {
   background: rgb(236, 186, 236);
-  margin: 8px;
-  width: 258;
-  height: 579;
+  margin: 60px auto;
+  border-radius: 10px;
+  max-width: 600px;
+  box-shadow: 0 20px 50px rgba(92, 2, 119, 0.829);
+  margin-bottom: 70px;
 }
 a {
   color: rgba(160, 4, 126, 0.952);
@@ -10,21 +12,25 @@ a {
 h1 {
   color: purple;
   text-align: center;
+  margin-left: 10px;
 }
 .inputSearchButton {
   font-size: 10px;
   border-radius: 10px;
-  background-color: #F3E5AB;
+  background-color: #f3e5ab;
   padding: 10px;
   line-height: 1px;
+  box-shadow: 0 10px 50px rgba(92, 2, 119, 0.829);
+  
 }
 .submitButton {
   font-size: 10px;
   border-radius: 20px;
-  background-color: #F3E5AB;
+  background-color: #f3e5ab;
   color: purple;
   padding: 15px;
   line-height: 1px;
+  box-shadow: 0 10px 50px rgba(92, 2, 119, 0.829);
 }
 .cityTemp {
   font-size: 50px;
@@ -32,7 +38,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   position: relative;
-  top: -10;
+  margin-top: 20px;
 }
 .sideTemp {
   display: flex;
@@ -45,9 +51,28 @@ h1 {
 .cityIcon {
   position: relative;
   top: -5px;
-  font-size: 60px;
+  font-size: 70px;
   margin-right: 10px;
+  margin-top: 10px;
 }
-.ditails {
+p{
   text-align: center;
+}
+form {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+::placeholder {
+  text-align: center;
+  color: purple;
+}
+border {
+  color: rgb(243, 229, 171);
+}
+footer{
+  font-size: small;
+  font-style: oblique;
+  text-align: center;
+  color: purple;
 }
