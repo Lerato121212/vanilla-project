@@ -1,3 +1,7 @@
+
+alert("Welcome to Purple Vanlla Please Enter City Below to Begin");
+
+
 function weatherResponse(response) {
   let temperatureElement = document.querySelector("#temperature");
   let temperature = reponse.data.temperature.current;
@@ -18,6 +22,8 @@ function weatherResponse(response) {
   iconElement.innerhtml = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
 }
 function formatDate(date) {
+  let now = newDate();
+  let cityDAte =document.querySelector("cityDAte");
   let minutes = date.getMinutes();
   let hours = date.getHours();
   let days = [
@@ -32,8 +38,12 @@ function formatDate(date) {
   let day = days[date.getDay()];
   if (minutes < 10) {
     minutes = `0${minutes}`;
+
+cityDAte.innerHTML= `${day}, ${hours}:${minutes}`
   }
-  return `${day} ${hours} ${minutes}`;
+  return `${day}, ${hours} :${minutes}`;
+
+
 }
 function weatherNew(response) {
   let temperatureElement = document.querySelector("#temp");
